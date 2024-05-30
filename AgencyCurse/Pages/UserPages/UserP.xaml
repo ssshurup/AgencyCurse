@@ -1,0 +1,32 @@
+﻿<Page x:Class="AgencyCurse.Pages.UserPages.UserP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgencyCurse.Pages.UserPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserP">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600 "/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <StackPanel>
+                <Button x:Name="TuorsBT" Content="Туры" Margin="10,5" Click="TuorsBT_Click"/>
+                <Button x:Name="MyToursBT" Content="МоиТуры" Margin="10,5" Click="MyToursBT_Click"/>
+                <Button x:Name="DiscBT" Content="Запросить скидку" Margin="10,5" Click="DiscBT_Click"/>
+                <Button x:Name="ИфдфтсуИЕ" Content="Пополнить баланс" Margin="10,5" Click="ИфдфтсуИЕ_Click" />
+                <TextBlock x:Name="BalTB" Text="Баланс: " Margin="10,5"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom">
+                <Button x:Name="BackBT" Content="Назад" Margin="10,5" Click="BackBT_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Image Source="/Images/logoIMG.jpg" />
+        </Grid>
+    </Grid>
+</Page>

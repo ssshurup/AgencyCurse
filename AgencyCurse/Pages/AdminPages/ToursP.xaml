@@ -1,0 +1,38 @@
+﻿<Page x:Class="AgencyCurse.Pages.AdminPages.ToursP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgencyCurse.Pages.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ToursP">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600 "/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <StackPanel>
+                <Button x:Name="AddBT" Content="Добавить тур" Margin="10,5" Click="AddBT_Click"/>
+                <Button x:Name="EditBT" Content="Изменить" Margin="10,5" Click="EditBT_Click"/>
+                <Button x:Name="DropBT" Content="Удалить тур" Margin="10,5" Click="DropBT_Click"/>
+                <Button x:Name="AboutBT" Margin="10,5" Content="Подробнее" Click="AboutBT_Click" />
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom">
+                <Button x:Name="BackBT" Content="Назад" Margin="10,5" Click="BackBT_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <DataGrid AutoGenerateColumns="False" Name="ToursDG">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Город"  Width="150"  Binding="{Binding city.name}"/>
+                    <DataGridTextColumn Header="Ночей"  Width="150" Binding="{Binding nightsCount}"/>
+                    <DataGridTextColumn Header="Отель"  Width="150" Binding="{Binding hotels.name}"/>
+                    <DataGridTextColumn Header="Способ" Width="150"  Binding="{Binding travelMethod.name}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Page>
